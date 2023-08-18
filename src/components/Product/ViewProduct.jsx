@@ -65,7 +65,7 @@ const ViewProduct = () => {
                 <figure key={index} onClick={() => handleImageClick(image)}>
                   <img
                     className="w-[90px] h-[90px]  rounded-3xl object-cover cursor-pointer"
-                    src={`/src/assets/img/products/${image}`}
+                    src={`/assets/img/products/${image}`}
                   />
                 </figure>
               ))}
@@ -74,7 +74,7 @@ const ViewProduct = () => {
               {selectedImage && (
                 <figure>
                   <img
-                    src={`/src/assets/img/products/${selectedImage}`}
+                    src={`/assets/img/products/${selectedImage}`}
                     alt="Selected"
                     className="max-w-[400px] m-auto object-cover rounded-[120px] h-auto "
                   />

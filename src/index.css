@@ -4,28 +4,28 @@
 
 @font-face {
   font-family: whyteinktrap;
-  src: url('./assets/fonts/WhyteInktrap-Regular.ttf');
+  src: url('/assets/fonts/WhyteInktrap-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: whyteinktrap;
-  src: url('./assets/fonts/WhyteInktrap-Medium.ttf');
+  src: url('/assets/fonts/WhyteInktrap-Medium.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: whyteinktrap;
-  src: url('./assets/fonts/WhyteInktrap-Black.ttf');
+  src: url('/assets/fonts/WhyteInktrap-Black.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: whyteinktrap;
-  src: url('./assets/fonts/WhyteInktrap-Super.ttf');
+  src: url('/assets/fonts/WhyteInktrap-Super.ttf');
   font-weight: bold;
   font-style: normal;
 }

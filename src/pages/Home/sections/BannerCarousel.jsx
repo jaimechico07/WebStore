@@ -35,11 +35,7 @@ const BannerCarousel = ({ banners }) => {
       <Swiper {...swiperProps} modules={[Pagination, Navigation, Autoplay]} className="mySwiper w-full h-full">
         {banners?.map(item => (
           <SwiperSlide key={item.id} className={`flex justify-center items-center group `}>
-            <img
-              src={`/src/assets/img/galery/${item.img}`}
-              alt={item.alt}
-              className={`object-scale-down ${item.diseño}`}
-            />
+            <img src={`assets/img/galery/${item.img}`} alt={item.alt} className={`object-scale-down ${item.diseño}`} />
             <Link
               to={`/product/${slugify(item.name, { lower: true })}`}
               className="absolute hidden group-hover:block cursor-pointer font-sans-whyteinktrap bg-primary_white rounded-full px-4 py-2 text-dynamic-banner  text-primary_black "

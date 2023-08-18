@@ -82,17 +82,17 @@ const Galery = ({ galery }) => {
               onMouseLeave={() => handleMouseLeave(item.id)}
             >
               <img
-                src={`/src/assets/img/galery/${item.images.bgimage}`}
+                src={`/assets/img/galery/${item.images.bgimage}`}
                 alt={item.alt}
                 className="absolute inset-0 rounded-3xl w-full h-full"
               />
               <img
-                src={`/src/assets/img/galery/${item.images.ctimage}`}
+                src={`/assets/img/galery/${item.images.ctimage}`}
                 alt={item.alt}
                 className="absolute inset-0 rounded-3xl w-full h-full  "
               />
               <img
-                src={`/src/assets/img/galery/${item.images.image}`}
+                src={`/assets/img/galery/${item.images.image}`}
                 alt={item.alt}
                 className={`absolute inset-0 rounded-3xl w-full h-full ${
                   hoverStates[item.id] ? 'opacity-0' : 'opacity-100'

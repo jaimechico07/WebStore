@@ -26,7 +26,7 @@ const CartProduct = () => {
                 <div key={index} className="py-5 grid md:grid-cols-3 grid-cols-2 place-items-center gap-2 text-center ">
                   <img
                     className="w-60 h-auto rounded-3xl object-cover"
-                    src={`/src/assets/img/galery/${item.images.image}`}
+                    src={`/assets/img/galery/${item.images.image}`}
                     alt={item.alt}
                   />
                   <div>
