@@ -8,7 +8,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Rectangle_12_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Rectangle_12_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">How does your apparel fit?</h3>
           </div>
@@ -19,7 +19,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Rectangle_10_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Rectangle_10_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">Where do you ship?</h3>
           </div>
@@ -37,7 +37,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Union_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Union_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">When will I get my order?</h3>
           </div>
@@ -50,7 +50,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Vector_6_1_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Vector_6_1_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">What if my package never came?</h3>
           </div>
@@ -62,7 +62,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Rectangle_16_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Rectangle_16_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3 leading-tight">Can I edit or cancel my order once it’s placed?</h3>
           </div>
@@ -74,7 +74,7 @@ const Faq = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Group_51_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Group_51_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">How do I contact support?</h3>
           </div>

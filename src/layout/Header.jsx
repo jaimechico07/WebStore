@@ -95,9 +95,6 @@ const Header = () => {
         <Link
           to="/cart"
           className="font-whyteinktrap flex items-center font-semibold text-base  border-2 border-solid border-primary_black px-5 py-1 rounded-[30px] hover:bg-black hover:text-white duration-300 cursor-pointer place-self-end "
-          // onClick={() => {
-          //   navigateLogin('/cart');
-          // }}
         >
           <span className="hidden lg:block">CART</span>
           <span className="lg:ml-2">{cart.length}</span>
