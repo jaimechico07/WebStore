@@ -8,7 +8,7 @@ const Customer = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/red-wave_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/red-wave_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">Shipping</h3>
           </div>
@@ -32,7 +32,7 @@ const Customer = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Rectangle_10_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Rectangle_10_1000x.png" alt="" />
             </figure>
             <h3 className="font-bold text-dynamic-h3">Returns</h3>
           </div>
@@ -45,7 +45,7 @@ const Customer = () => {
         <div>
           <div className="flex items-center gap-x-4">
             <figure>
-              <img className="w-8 h-8 object-contain" src="/src/assets/img/about/Rectangle_12_1000x.png" alt="" />
+              <img className="w-8 h-8 object-contain" src="/assets/img/about/Rectangle_12_1000x.png" alt="" />
             </figure>
             <h3 id="#contact" className="font-bold text-dynamic-h3">
               Contact Us
