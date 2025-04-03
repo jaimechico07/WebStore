@@ -1,9 +1,9 @@
 import React from 'react';
-import { useCart } from '../../context/cartContext';
+import useCartStore from '../../context/cartContext';
 import { Link } from 'react-router-dom';
 
 const CartProduct = () => {
-  const { cart, removeFromCart } = useCart();
+  const { cart, removeFromCart } = useCartStore();
 
   const calculateSubtotal = (price, quantity) => {
     return price * quantity;

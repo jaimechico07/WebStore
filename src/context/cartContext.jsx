@@ -1,54 +1,39 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { create } from 'zustand';
 
-const CartContext = createContext();
+// Obtener carrito desde localStorage
+const getStoredCart = () => JSON.parse(localStorage.getItem('cart')) || [];
 
-export const CartProvider = ({ children }) => {
-  const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-  const [cart, setCart] = useState(storedCart);
-  const [addingToCart, setAddingToCart] = useState(false);
+// Crear el store de Zustand
+const useCartStore = create((set, get) => ({
+  cart: getStoredCart(),
+  addingToCart: false,
 
-  // Cargar el carrito desde localStorage al inicio
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart'));
-    if (storedCart) {
-      setCart(storedCart);
-    }
-  }, []);
+  addToCart: product => {
+    set(state => {
+      const existingProductIndex = state.cart.findIndex(item => item.id === product.id);
+      let updatedCart;
 
-  // Guardar el carrito en localStorage cada vez que cambie
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
+      if (existingProductIndex !== -1) {
+        updatedCart = [...state.cart];
+        updatedCart[existingProductIndex].quantity += product.quantity;
+      } else {
+        updatedCart = [...state.cart, { ...product }];
+      }
 
-  const addToCart = product => {
-    const existingProductIndex = cart.findIndex(item => item.id === product.id);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      return { cart: updatedCart };
+    });
+  },
 
-    if (existingProductIndex !== -1) {
-      const updatedCart = [...cart];
-      updatedCart[existingProductIndex].quantity += product.quantity;
-      setCart(updatedCart);
-    } else {
-      setCart([...cart, { ...product }]);
-    }
-  };
+  removeFromCart: productId => {
+    set(state => {
+      const updatedCart = state.cart.filter(item => item.id !== productId);
+      localStorage.setItem('cart', JSON.stringify(updatedCart));
+      return { cart: updatedCart };
+    });
+  },
 
-  const removeFromCart = productId => {
-    const updatedCart = cart.filter(item => item.id !== productId);
-    setCart(updatedCart);
-  };
+  setAddingToCart: status => set({ addingToCart: status }),
+}));
 
-  // Guardar el carrito en localStorage cada vez que cambie
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }, [cart]);
-
-  return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, addingToCart, setAddingToCart }}>
-      {children}
-    </CartContext.Provider>
-  );
-};
-
-export const useCart = () => {
-  return useContext(CartContext);
-};
+export default useCartStore;

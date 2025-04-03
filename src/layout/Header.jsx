@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { useCart } from '../context/cartContext';
+import useCartStore from '../context/cartContext';
 import { Link } from 'react-router-dom';
 
 import 'boxicons';
@@ -10,7 +10,7 @@ const Header = () => {
   const bgOpen = useRef();
   const location = useLocation();
   const prevIsVisibleRef = useRef(true);
-  const { cart } = useCart();
+  const { cart } = useCartStore();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);

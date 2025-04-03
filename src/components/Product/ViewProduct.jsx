@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import slugify from 'slugify';
-import { useCart } from '../../context/cartContext';
+import useCartStore from '../../context/cartContext';
 
 const ViewProduct = () => {
   const { slug } = useParams();
-  const { addToCart } = useCart();
+  const { addToCart } = useCartStore();
 
   const [product, setProduct] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
